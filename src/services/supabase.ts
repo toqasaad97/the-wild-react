@@ -1,10 +1,7 @@
-import { createClient } from "@supabase/supabase-js";
 
-export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
+import { createClient } from '@supabase/supabase-js'
+const supabaseUrl = 'https://ebvgxfuqqodscbvfcrnr.supabase.co'
+const supabaseKey =`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVidmd4ZnVxcW9kc2NidmZjcm5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk3ODY3MTksImV4cCI6MjA0NTM2MjcxOX0.tijrPPSDjaznxRiMTcY6q6KLvPbMGcQmM9gbqxbFxQg`
+const supabase = createClient(supabaseUrl, supabaseKey)
 
-export const supabaseKey = import.meta.env.VITE_SUPABASE_KEY || "";
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-export const imageBucketName = "wild-oasis-images";
-export const avatarBucketName = "avatars";
-export default supabase;
+export default supabase
